@@ -75,6 +75,49 @@ public class Projeto_ {
 
         System.out.println("Triangulo:");
 
+        /*
+            triangulo retangulo para a direita
+
+         */
+
+        int altura = 5;
+
+        for (int linha = 1; linha <= altura; linha++) {
+            // Imprime os espaços em branco à esquerda
+            for (int espaco = 1; espaco <= altura - linha; espaco++) {
+                System.out.print(" ");
+            }
+
+            // Imprime os asteriscos
+            for (int asterisco = 1; asterisco <= linha; asterisco++) {
+                System.out.print("*");
+            }
+
+            // Vai para a próxima linha
+            System.out.println();
+        }
+
+        System.out.println("proximo triangulo");
+
+        /*
+            triangulo invertido para a direita
+         */
+        int altura2 = 5;
+
+        for (int linha = 1; linha <= altura2; linha++) {
+            // Imprima os espaços em branco à esquerda
+            for (int espaco = 1; espaco < linha; espaco++) {
+                System.out.print(" ");
+            }
+
+            // Imprima os asteriscos
+            for (int asterisco = 1; asterisco <= altura2 - linha + 1; asterisco++) {
+                System.out.print("*");
+            }
+
+            // Vá para a próxima linha
+            System.out.println();
+        }
 
         System.out.println("Quadrado:");
 
