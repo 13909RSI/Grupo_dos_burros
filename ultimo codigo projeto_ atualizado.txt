@@ -39,29 +39,32 @@ public class Projeto_ {
     */
     }
 
-    public static void menu(){
+    public static void menu() {
 
-        int escolha;
+        String escolha;
 
-        System.out.println("MENU:");
-        System.out.println("Escolha o jogo que quer jogar!" +
-                "\n" +
-                "(1) Desenho de figuras geométricas;\n" +
-                "(2) Desenho de trangulos lado a lado; \n" +
-                "(3) Jogo do Galo; \n" +
-                "(4) Sair");
-        System.out.println("introduza o número que aparece antes do nome do jogo: ");
+            System.out.println("MENU:");
+            System.out.println("Escolha o jogo que quer jogar!" +
+                    "\n" +
+                    "(1) Desenho de figuras geométricas;\n" +
+                    "(2) Desenho de trangulos lado a lado; \n" +
+                    "(3) Jogo do Galo; \n" +
+                    "(4) Sair");
+        do{
+            System.out.println("introduza o número que aparece antes do nome do jogo: ");
 
-        escolha = ler.nextInt();
+            escolha = ler.next();
 
-        if (escolha == 1) {
-            um();
-        } else if (escolha == 2) {
-            dois();
-        } else if (escolha == 3) {
-            tres();
-        } else if (escolha == 4)
-            quatro();
+            if (escolha.equals("1")) {
+                um();
+            } else if (escolha.equals("2")) {
+                dois();
+            } else if (escolha.equals("3")) {
+                tres();
+            } else if (escolha.equals("4"))
+                quatro();
+
+        } while (!escolha.equals("4"));
     }
 
     public static void um() {
@@ -80,30 +83,26 @@ public class Projeto_ {
 
 
 
-
-
-
-
-
-
-
-
-        System.out.println("desejas voltar ao menu? Sim:[S] Não:[N]");
-
-        resposta =  ler.next();
-
-        sair(resposta);
+        sair();
 
     }
 
-    public static void sair (String resposta){
+    public static void sair (){
+
+        String resposta;
+
+        do{
+            System.out.println ("desejas voltar ao menu? Sim:[S] Não:[N]");
+            resposta =  ler.next();
+
+        }while(!resposta.equals("S") && !resposta.equals("N"));
 
         if (resposta.equals("S")){
             System.out.println ("A entrar no menu...");
             menu();
 
         }
-        else if (resposta.equals("N")){
+        if (resposta.equals("N")){
             System.out.println("A sair do executavél...");
             System.exit(0);
         }
