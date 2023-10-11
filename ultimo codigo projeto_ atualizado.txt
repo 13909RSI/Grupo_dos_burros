@@ -70,6 +70,24 @@ public class Projeto_ {
 
         System.out.println("Desenho de figuras geométricas iniciado.");
 
+        System.out.println("Triangulo:");
+
+
+        System.out.println("Quadrado:");
+
+
+        System.out.println("Trapézio:");
+
+
+
+
+
+
+
+
+
+
+
         System.out.println("desejas voltar ao menu? Sim:[S] Não:[N]");
 
         resposta =  ler.next();
