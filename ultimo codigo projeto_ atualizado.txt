@@ -1,0 +1,157 @@
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Projeto_ {
+    static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        menu();
+
+        /*int escolha;
+
+
+        System.out.println("\n");
+        System.out.println("Projeto Criado por: \n\n" +
+                "Diogo Vareda, nº: 13900 \n" +
+                "Miguel Pereira, nº: 13909 \n" +
+                "Rúben Silva, nº: 13898.\n");
+
+        System.out.println("MENU:");
+        System.out.println("Escolha o jogo que quer jogar!" +
+                "\n" +
+                "(1) Desenho de figuras geométricas;\n" +
+                "(2) Desenho de trangulos lado a lado; \n" +
+                "(3) Jogo do Galo; \n" +
+                "(4) Sair");
+        System.out.println("introduza o número que aparece antes do nome do jogo: ");
+
+        escolha = ler.nextInt();
+
+        if (escolha == 1) {
+            um();
+        } else if (escolha == 2) {
+            dois();
+        } else if (escolha == 3) {
+            tres();
+        } else if (escolha == 4)
+            quatro();
+    }
+    */
+    }
+
+    public static void menu(){
+
+        int escolha;
+
+        System.out.println("MENU:");
+        System.out.println("Escolha o jogo que quer jogar!" +
+                "\n" +
+                "(1) Desenho de figuras geométricas;\n" +
+                "(2) Desenho de trangulos lado a lado; \n" +
+                "(3) Jogo do Galo; \n" +
+                "(4) Sair");
+        System.out.println("introduza o número que aparece antes do nome do jogo: ");
+
+        escolha = ler.nextInt();
+
+        if (escolha == 1) {
+            um();
+        } else if (escolha == 2) {
+            dois();
+        } else if (escolha == 3) {
+            tres();
+        } else if (escolha == 4)
+            quatro();
+    }
+
+    public static void um() {
+
+        String resposta;
+
+        System.out.println("Desenho de figuras geométricas iniciado.");
+
+        System.out.println("desejas voltar ao menu? Sim:[S] Não:[N]");
+
+        resposta =  ler.next();
+
+        sair(resposta);
+
+    }
+
+    public static void sair (String resposta){
+
+        if (resposta.equals("S")){
+            System.out.println ("A entrar no menu...");
+            menu();
+
+        }
+        else if (resposta.equals("N")){
+            System.out.println("A sair do executavél...");
+            System.exit(0);
+        }
+    }
+    public static void dois() {
+        System.out.println("Desenho de triangulos lado a lado iniciado.");
+
+    }
+
+    public static void tres() {
+        System.out.println("jogo do galo");
+
+    }
+
+    public static void quatro() {
+        System.out.println("a sair do executavél...");
+        System.exit(0);
+
+    }
+}
+
+        /*
+        do{
+
+            System.out.print("\nEscolha o seu Jogo: ");
+
+            escolha = ler.nextInt();
+
+            if (escolha < 1 || escolha > 4) {
+
+                System.out.print("Número inválido.");
+
+            }
+
+
+        }while (escolha < 1 || escolha > 4);
+
+        if(escolha == 1){
+
+            System.out.println("Desenho de figuras geométricas iniciado.");
+
+
+        }
+        if (escolha == 2){
+
+            System.out.println("Desenho de triangulos lado a lado iniciado.");
+
+        }
+        if(escolha == 3){
+
+            System.out.println("Jogo do Galo iniciado");
+
+        }
+        if(escolha == 4){
+            System.out.println("A sair do executavél.");
+            System.exit(0);
+        }
+
+
+        //escolha = ler.nextInt();
+
+
+
+        System.out.println("Resposta inválida");
+
+
+    }
+}
+*/
