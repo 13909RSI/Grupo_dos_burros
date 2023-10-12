@@ -70,6 +70,11 @@ public class Projeto_ {
     public static void um() {
 
         System.out.println("Desenho de figuras geométricas iniciado.");
+        System.out.println("Triangulo");
+        System.out.println("Quadrado:");
+        System.out.println("Trapézio:");
+
+
     }
 
     public static void sair (){
@@ -97,18 +102,58 @@ public class Projeto_ {
 
         String resposta;
 
-        System.out.println("Triangulo:");
+        System.out.println("Triangulo A:");
 
-        /*
-            triangulo retangulo para a direita
+        int alturaA = 5;
 
-         */
+        for (int linha = 1; linha <= alturaA; linha++) {
+            // Imprime os asteriscos
+            for (int asterisco = 1; asterisco <= linha; asterisco++) {
+                System.out.print("*");
+            }
 
-        int altura = 5;
+            // Vai para a próxima linha
+            System.out.println();
+        }
+        System.out.println("TrianguloB: ");
 
-        for (int linha = 1; linha <= altura; linha++) {
+        int alturaB = 5;
+
+        for (int linha = 1; linha <= alturaB; linha++) {
+            // Imprime os asteriscos
+            for (int asterisco = 1; asterisco <= alturaB - linha + 1; asterisco++) {
+                System.out.print("*");
+            }
+
+            // Vai para a próxima linha
+            System.out.println();
+        }
+
+        System.out.println("TrianguloC: ");
+        int alturaC = 5;
+
+        for (int linha = 1; linha <= alturaC; linha++) {
+            // Imprima os espaços em branco à esquerda
+            for (int espaco = 1; espaco < linha; espaco++) {
+                System.out.print(" ");
+            }
+
+            // Imprima os asteriscos
+            for (int asterisco = 1; asterisco <= alturaC - linha + 1; asterisco++) {
+                System.out.print("*");
+            }
+
+            // Vá para a próxima linha
+            System.out.println();
+        }
+
+
+    System.out.println("Triangulo D:");
+        int alturaD = 5;
+
+        for (int linha = 1; linha <= alturaD; linha++) {
             // Imprime os espaços em branco à esquerda
-            for (int espaco = 1; espaco <= altura - linha; espaco++) {
+            for (int espaco = 1; espaco <= alturaD - linha; espaco++) {
                 System.out.print(" ");
             }
 
@@ -120,38 +165,7 @@ public class Projeto_ {
             // Vai para a próxima linha
             System.out.println();
         }
-
-        System.out.println("proximo triangulo");
-
-        /*
-            triangulo invertido para a direita
-         */
-        int altura2 = 5;
-
-        for (int linha = 1; linha <= altura2; linha++) {
-            // Imprima os espaços em branco à esquerda
-            for (int espaco = 1; espaco < linha; espaco++) {
-                System.out.print(" ");
-            }
-
-            // Imprima os asteriscos
-            for (int asterisco = 1; asterisco <= altura2 - linha + 1; asterisco++) {
-                System.out.print("*");
-            }
-
-            // Vá para a próxima linha
-            System.out.println();
-        }
-
-        System.out.println("Quadrado:");
-
-
-        System.out.println("Trapézio:");
-
-
-
         sair();
-
     }
 
     public static void tres() {
