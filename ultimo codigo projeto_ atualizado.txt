@@ -69,9 +69,33 @@ public class Projeto_ {
 
     public static void um() {
 
+        System.out.println("Desenho de figuras geométricas iniciado.");
+    }
+
+    public static void sair (){
+
         String resposta;
 
-        System.out.println("Desenho de figuras geométricas iniciado.");
+        do{
+            System.out.println ("desejas voltar ao menu? Sim:[S] Não:[N]");
+            resposta =  ler.next();
+
+        }while(!resposta.equals("S") && !resposta.equals("N"));
+
+        if (resposta.equals("S")){
+            System.out.println ("A entrar no menu...");
+            menu();
+
+        }
+        if (resposta.equals("N")){
+            System.out.println("A sair do executavél...");
+            System.exit(0);
+        }
+    }
+    public static void dois() {
+        System.out.println("Desenho de triangulos lado a lado iniciado.");
+
+        String resposta;
 
         System.out.println("Triangulo:");
 
@@ -127,31 +151,6 @@ public class Projeto_ {
 
 
         sair();
-
-    }
-
-    public static void sair (){
-
-        String resposta;
-
-        do{
-            System.out.println ("desejas voltar ao menu? Sim:[S] Não:[N]");
-            resposta =  ler.next();
-
-        }while(!resposta.equals("S") && !resposta.equals("N"));
-
-        if (resposta.equals("S")){
-            System.out.println ("A entrar no menu...");
-            menu();
-
-        }
-        if (resposta.equals("N")){
-            System.out.println("A sair do executavél...");
-            System.exit(0);
-        }
-    }
-    public static void dois() {
-        System.out.println("Desenho de triangulos lado a lado iniciado.");
 
     }
 
