@@ -6,37 +6,6 @@ public class Projeto_ {
 
     public static void main(String[] args) {
         menu();
-
-        /*int escolha;
-
-
-        System.out.println("\n");
-        System.out.println("Projeto Criado por: \n\n" +
-                "Diogo Vareda, nº: 13900 \n" +
-                "Miguel Pereira, nº: 13909 \n" +
-                "Rúben Silva, nº: 13898.\n");
-
-        System.out.println("MENU:");
-        System.out.println("Escolha o jogo que quer jogar!" +
-                "\n" +
-                "(1) Desenho de figuras geométricas;\n" +
-                "(2) Desenho de trangulos lado a lado; \n" +
-                "(3) Jogo do Galo; \n" +
-                "(4) Sair");
-        System.out.println("introduza o número que aparece antes do nome do jogo: ");
-
-        escolha = ler.nextInt();
-
-        if (escolha == 1) {
-            um();
-        } else if (escolha == 2) {
-            dois();
-        } else if (escolha == 3) {
-            tres();
-        } else if (escolha == 4)
-            quatro();
-    }
-    */
     }
 
     public static void menu() {
@@ -70,11 +39,15 @@ public class Projeto_ {
     public static void um() {
 
         System.out.println("Desenho de figuras geométricas iniciado.");
-        System.out.println("Triangulo");
+
+
+        System.out.println("Triangulo:");
+
         System.out.println("Quadrado:");
+
         System.out.println("Trapézio:");
 
-
+        sair();
     }
 
     public static void sair (){
@@ -115,7 +88,18 @@ public class Projeto_ {
             // Vai para a próxima linha
             System.out.println();
         }
-        System.out.println("TrianguloB: ");
+        System.out.println("Triangulo B: ");
+
+        /*
+
+            a = [],[],[]
+
+
+         */
+
+
+
+
 
         int alturaB = 5;
 
@@ -129,16 +113,16 @@ public class Projeto_ {
             System.out.println();
         }
 
-        System.out.println("TrianguloC: ");
+        System.out.println("Triangulo C: ");
         int alturaC = 5;
 
         for (int linha = 1; linha <= alturaC; linha++) {
-            // Imprima os espaços em branco à esquerda
+            // Imprime os espaços em branco à esquerda
             for (int espaco = 1; espaco < linha; espaco++) {
                 System.out.print(" ");
             }
 
-            // Imprima os asteriscos
+            // Imprime os asteriscos
             for (int asterisco = 1; asterisco <= alturaC - linha + 1; asterisco++) {
                 System.out.print("*");
             }
@@ -179,52 +163,3 @@ public class Projeto_ {
 
     }
 }
-
-        /*
-        do{
-
-            System.out.print("\nEscolha o seu Jogo: ");
-
-            escolha = ler.nextInt();
-
-            if (escolha < 1 || escolha > 4) {
-
-                System.out.print("Número inválido.");
-
-            }
-
-
-        }while (escolha < 1 || escolha > 4);
-
-        if(escolha == 1){
-
-            System.out.println("Desenho de figuras geométricas iniciado.");
-
-
-        }
-        if (escolha == 2){
-
-            System.out.println("Desenho de triangulos lado a lado iniciado.");
-
-        }
-        if(escolha == 3){
-
-            System.out.println("Jogo do Galo iniciado");
-
-        }
-        if(escolha == 4){
-            System.out.println("A sair do executavél.");
-            System.exit(0);
-        }
-
-
-        //escolha = ler.nextInt();
-
-
-
-        System.out.println("Resposta inválida");
-
-
-    }
-}
-*/
