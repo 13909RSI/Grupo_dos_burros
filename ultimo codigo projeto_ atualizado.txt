@@ -7,7 +7,6 @@ public class Projeto_ {
     public static void main(String[] args) {
         menu();
     }
-
     public static void menu() {
 
         String escolha;
@@ -71,13 +70,21 @@ public class Projeto_ {
         }
     }
     public static void dois() {
+
+        int tamanho;
+
+
+
         System.out.println("Desenho de triangulos lado a lado iniciado.");
 
-        String resposta;
+        System.out.println("Que tamanho o programa vai dar aos triangulos?");
+
+        tamanho = ler.nextInt();
+
 
         System.out.println("Triangulo A:");
 
-        int alturaA = 5;
+        int alturaA = tamanho;
 
         for (int linha = 1; linha <= alturaA; linha++) {
             // Imprime os asteriscos
@@ -87,21 +94,13 @@ public class Projeto_ {
 
             // Vai para a próxima linha
             System.out.println();
+
         }
+
+
         System.out.println("Triangulo B: ");
 
-        /*
-
-            a = [],[],[]
-
-
-         */
-
-
-
-
-
-        int alturaB = 5;
+        int alturaB = tamanho;
 
         for (int linha = 1; linha <= alturaB; linha++) {
             // Imprime os asteriscos
@@ -114,7 +113,7 @@ public class Projeto_ {
         }
 
         System.out.println("Triangulo C: ");
-        int alturaC = 5;
+        int alturaC = tamanho;
 
         for (int linha = 1; linha <= alturaC; linha++) {
             // Imprime os espaços em branco à esquerda
@@ -133,7 +132,7 @@ public class Projeto_ {
 
 
     System.out.println("Triangulo D:");
-        int alturaD = 5;
+        int alturaD = tamanho;
 
         for (int linha = 1; linha <= alturaD; linha++) {
             // Imprime os espaços em branco à esquerda
