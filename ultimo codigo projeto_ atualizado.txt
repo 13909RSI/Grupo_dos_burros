@@ -72,87 +72,74 @@ public class Projeto_ {
     public static void dois() {
 
         int tamanho;
+        int linha = 1;
+
+        System.out.println("Desenho de triângulos lado a lado iniciado.");
 
 
-
-        System.out.println("Desenho de triangulos lado a lado iniciado.");
-
-        System.out.println("Que tamanho o programa vai dar aos triangulos?");
-
+        System.out.println("Que tamanho o programa vai dar aos triângulos?");
         tamanho = ler.nextInt();
 
 
-        System.out.println("Triangulo A:");
 
-        int alturaA = tamanho;
+        System.out.println("Triângulo A:\tTriângulo B:\tTriângulo C:\tTriângulo D:");
 
-        for (int linha = 1; linha <= alturaA; linha++) {
-            // Imprime os asteriscos
+        for (linha = 1; linha <= tamanho; linha++) {
+
+            // Triângulo A
+
+
             for (int asterisco = 1; asterisco <= linha; asterisco++) {
                 System.out.print("*");
             }
-
-            // Vai para a próxima linha
-            System.out.println();
-
-        }
+            System.out.print("\t\t\t\t");
 
 
-        System.out.println("Triangulo B: ");
 
-        int alturaB = tamanho;
+            // Triângulo B
 
-        for (int linha = 1; linha <= alturaB; linha++) {
-            // Imprime os asteriscos
-            for (int asterisco = 1; asterisco <= alturaB - linha + 1; asterisco++) {
+            for (int asterisco = 1; asterisco <= tamanho - linha+1; asterisco++) {
                 System.out.print("*");
             }
+            System.out.print("\t\t\t\t");
 
-            // Vai para a próxima linha
-            System.out.println();
-        }
 
-        System.out.println("Triangulo C: ");
-        int alturaC = tamanho;
 
-        for (int linha = 1; linha <= alturaC; linha++) {
-            // Imprime os espaços em branco à esquerda
+
+            // Triângulo C
+
+
             for (int espaco = 1; espaco < linha; espaco++) {
                 System.out.print(" ");
             }
-
-            // Imprime os asteriscos
-            for (int asterisco = 1; asterisco <= alturaC - linha + 1; asterisco++) {
+            for (int asterisco = 1; asterisco <= tamanho - linha +1; asterisco++) {
                 System.out.print("*");
             }
-
-            // Vá para a próxima linha
-            System.out.println();
-        }
+            System.out.print("\t\t\t");
 
 
-    System.out.println("Triangulo D:");
-        int alturaD = tamanho;
 
-        for (int linha = 1; linha <= alturaD; linha++) {
-            // Imprime os espaços em branco à esquerda
-            for (int espaco = 1; espaco <= alturaD - linha; espaco++) {
+
+            // Triângulo D
+
+
+            for (int espaco = 1; espaco <= tamanho - linha; espaco++) {
                 System.out.print(" ");
-            }
 
-            // Imprime os asteriscos
+            }
             for (int asterisco = 1; asterisco <= linha; asterisco++) {
                 System.out.print("*");
             }
-
-            // Vai para a próxima linha
             System.out.println();
+
         }
         sair();
+
     }
 
     public static void tres() {
         System.out.println("jogo do galo");
+        sair();
 
     }
 
