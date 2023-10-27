@@ -36,7 +36,7 @@ public class Projeto_ {
         } while (!escolha.equals("4"));
     }
 
-    public static void sair (){
+    public static void sair() {
 
         String resposta;
 
@@ -61,20 +61,23 @@ public class Projeto_ {
 
         int tamanho;
         int linha;
+        int controlo = 0;
+        int controlo1 = 0;
 
         System.out.println("Desenho de figuras geométricas iniciado.");
 
-        System.out.println("Introduza um número de 1 a 10 para representar o tamanho das figuras:");
+        System.out.println("Introduza um número de 2 a 10 para representar o tamanho das figuras:");
         tamanho = ler.nextInt();
 
-        while (tamanho > 10 || tamanho < 0) {
+        while (tamanho > 10 || tamanho < 2) {
 
-            System.out.println("Valor introduzido superior a 10 ou inferior a 1.");
-            System.out.println("Introduza o tamanho para representar as figuras novamente dentro de 1 e 10:");
+            System.out.println("Valor introduzido superior a 10 ou inferior a 2.");
+            System.out.println("Introduza o tamanho para representar as figuras novamente dentro de 2 e 10:");
             tamanho = ler.nextInt();
 
         }
 
+        System.out.println();
         System.out.println("Triângulo:");
         
         for (linha = 1; linha <= tamanho; linha++) {
@@ -94,14 +97,36 @@ public class Projeto_ {
 
         }
 
+        System.out.println();
         System.out.println("Quadrado:");
 
         for (linha = 1; linha <= tamanho; linha++) {
 
-            System.out.println();
+            //for = tamanho * tamanho; //cria as 25 figuras necessárias
+
+            for (controlo = 0; controlo <= tamanho - 1; controlo++) {
+                
+                if(controlo1 % 2 == 0) {
+
+                    System.out.print("X ");
+
+                }
+
+                else {
+
+                    System.out.print("O ");
+
+                }
+
+                controlo1 = controlo1 + 1;
+            
+            }
+
+        System.out.println();
 
         }
 
+        System.out.println();
         System.out.println("Trapézio:");
 
         sair();
