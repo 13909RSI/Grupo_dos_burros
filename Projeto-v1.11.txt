@@ -1,0 +1,234 @@
+import java.util.Scanner;
+
+public class Projeto_ {
+
+    static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        menu();
+    }
+
+    public static void menu() {
+
+        String escolha;
+
+        System.out.println("MENU:");
+        System.out.println("Escolha o jogo que quer jogar!" +
+                "\n" +
+                "(1) Desenho de figuras geométricas;\n" +
+                "(2) Desenho de trangulos lado a lado; \n" +
+                "(3) Jogo do Galo; \n" +
+                "(4) Sair");
+        do{
+            System.out.print("Introduza o número que aparece antes do nome do jogo: ");
+
+            escolha = ler.next();
+
+            if (escolha.equals("1")) {
+                um();
+            } else if (escolha.equals("2")) {
+                dois();
+            } else if (escolha.equals("3")) {
+                tres();
+            } else if (escolha.equals("4"))
+                quatro();
+
+        } while (!escolha.equals("4"));
+    }
+
+    public static void sair() {
+
+        String resposta;
+
+        do{
+            System.out.println ("Desejas voltar ao menu?\nSim[S ou s] Não[N ou n]");
+            resposta =  ler.next();
+
+        }while(!resposta.equals("S") && !resposta.equals("s") && !resposta.equals("N") && !resposta.equals("n"));
+
+        if (resposta.equals("S") || resposta.equals("s")){
+            System.out.println ("A entrar no menu...");
+            menu();
+
+        }
+        if (resposta.equals("N") || resposta.equals("n")){
+            System.out.println("A sair do executavél...");
+            System.exit(0);
+        }
+    }
+
+    public static void um() {
+
+        int tamanho;
+        int linha;
+        int controlo = 0;
+        int controlo1 = 0;
+
+        System.out.println("Desenho de figuras geométricas iniciado.");
+
+        System.out.println("Introduza um número de 2 a 10 para representar o tamanho das figuras:");
+        tamanho = ler.nextInt();
+
+        while (tamanho > 10 || tamanho < 2) {
+
+            System.out.println("Valor introduzido superior a 10 ou inferior a 2.");
+            System.out.println("Introduza o tamanho para representar as figuras novamente dentro de 2 e 10:");
+            tamanho = ler.nextInt();
+
+        }
+
+        System.out.println();
+        System.out.println("Triângulo:");
+        System.out.println();
+        
+        for (linha = 1; linha <= tamanho; linha++) {
+
+            for (int triangulo = 1; triangulo < tamanho - linha + 1; triangulo++) {
+
+                System.out.print(" ");
+
+            }
+
+            for (int triangulo = 1; triangulo <= 2 * linha - 1; triangulo++) {
+            
+                System.out.print("*");
+
+            }
+            System.out.println();
+
+        }
+
+        System.out.println();
+        System.out.println("Quadrado:");
+        System.out.println();
+
+        for (linha = 1; linha <= tamanho; linha++) {
+
+            //for = tamanho * tamanho; //cria as 25 figuras necessárias <3
+
+            for (controlo = 0; controlo <= tamanho - 1; controlo++) {
+                
+                if(controlo1 % 2 == 0) {
+
+                    System.out.print("X ");
+
+                }
+
+                else {
+
+                    System.out.print("O ");
+
+                }
+
+                controlo1 = controlo1 + 1;
+            
+            }
+
+        System.out.println();
+
+        }
+
+        System.out.println();
+        System.out.println("Trapézio:");
+        System.out.println();
+
+        sair();
+        }
+
+    public static void dois() {
+
+        int tamanho1;
+        int tamanho;
+        int linha = 1;
+
+        tamanho1 = '\t';
+
+        System.out.println("Desenho de triângulos lado a lado iniciado.");
+
+        System.out.print("Que tamanho o programa vai dar aos triângulos? ");
+        tamanho = ler.nextInt();
+
+        while (tamanho < 2 || tamanho > 12) {
+
+            System.out.print("Tamanho não permitido, tente novamente: ");
+            tamanho = ler.nextInt();
+
+        }
+
+        System.out.println();
+
+        System.out.println("Triângulo A:\t\tTriângulo B:\t\t Triângulo C:\t\t Triângulo D:");
+
+        for (linha = 1; linha <= tamanho; linha++) {
+
+            // Triângulo A <3
+            
+    
+
+            for (int asterisco = 1; asterisco <= linha; asterisco++) {
+                System.out.print("*");
+            }   
+            System.out.print("\t\t\t");
+            
+
+
+            // Triângulo B
+
+            
+                
+            for (int asterisco = 1; asterisco <= tamanho - linha + 1; asterisco++) {
+                System.out.print("*");
+            }
+            System.out.print("\t\t\t\t");
+                
+
+            // Triângulo C
+
+            
+            
+                
+
+            for (int espaco = 1; espaco < linha; espaco++) {
+                System.out.print(" ");
+            }
+            for (int asterisco = 1; asterisco <= tamanho - linha +1; asterisco++) {
+                System.out.print("*");
+            }
+            System.out.print("\t\t\t");
+
+           
+
+
+            // Triângulo D
+            
+
+            
+            
+            for (int espaco = 1; espaco <= tamanho - linha; espaco++) {
+                System.out.print(" ");
+            }
+            for (int asterisco = 1; asterisco <= linha; asterisco++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            
+
+        //System.out.println();
+        
+        sair();
+        }
+    }
+
+    public static void tres() {
+        System.out.println("Jogo do galo");
+        sair();
+
+    }
+
+    public static void quatro() {
+        System.out.println("a sair do executavél...");
+        System.exit(0);
+
+    }
+}
